@@ -6,11 +6,11 @@ spec:
   replicas: 1
   strategy:
     canary:
-      canaryService: rollouts-demo-canary
-      stableService: rollouts-demo-stable
+      canaryService: canary
+      stableService: stable
       trafficRouting:
         nginx:
-          stableIngress: rollouts-demo-stable-ingress
+          stableIngress: rollouts-demo-ingress
       steps:
       - setWeight: 5
       - pause: {}
